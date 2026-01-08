@@ -29,6 +29,8 @@ public class PlayerConnectFeature implements Feature {
             if (FeatureManager.getInstance().isEnabled(this)) {
                 addButton();
             }
+            // install Join dialog hook so "Player connect" section is added to JoinDialog
+            PlayerConnectJoinHook.install(this);
         });
     }
     
